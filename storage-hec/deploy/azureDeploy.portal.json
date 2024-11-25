@@ -82,12 +82,12 @@
                 }
             },
             {
-                "name": "nsgSection",
+                "name": "vnetSection",
                 "type": "Microsoft.Common.Section",
-                "label": "NSG Location Details",
+                "label": "Vnet Location Details",
                 "elements": [
                     {
-                        "name": "nsgConnectionString",
+                        "name": "vnetConnectionString",
                         "label": "Storage Account Connection String",
                         "type": "Microsoft.Common.TextBox",
                         "toolTip": "The connection string to the stroage account containing NSG Flow Logs",
@@ -96,21 +96,21 @@
                         }
                     },
                     {
-                        "name": "nsgContainer",
-                        "label": "NSG Container",
+                        "name": "vnetContainer",
+                        "label": "vNet Container",
                         "type": "Microsoft.Common.TextBox",
-                        "toolTip": "The blob container that contains the NSG Flow Logs",
-                        "defaultValue": "insights-logs-networksecuritygroupflowevent",
+                        "toolTip": "The blob container that contains the vNet Flow Logs",
+                        "defaultValue": "insights-logs-vnet-flowevent",
                         "constraints": {
                             "required": true
                         }
                     },
                     {
-                        "name": "nsgSourcetype",
-                        "label": "NSG Source Type",
+                        "name": "vnetSourcetype",
+                        "label": "Vnet Source Type",
                         "type": "Microsoft.Common.TextBox",
-                        "toolTip": "Splunk Souretype for the NSG Logs",
-                        "defaultValue": "azure:nsg:flowlog",
+                        "toolTip": "Splunk Souretype for the vNet Logs",
+                        "defaultValue": "azure:vnet:flowlog",
                         "constraints": {
                             "required": true
                         }
@@ -206,10 +206,10 @@
             "appName": "[steps('basics').appName]",
             "storageAccountType": "[steps('basics').storageAccountType]",
             "storageAccountTLS": "[steps('basics').storageAccountTLS]",
-            "nsgConnectionString": "[steps('basics').nsgSection.nsgConnectionString]",
-            "nsgContainer": "[steps('basics').nsgSection.nsgContainer]",
-            "nsgSourceType": "[steps('basics').nsgSection.nsgSourcetype]",
-            "denormalizeEvents": "[steps('basics').nsgSection.denormalizeEvents]",
+            "vnetConnectionString": "[steps('basics').vnetSection.vnetConnectionString]",
+            "vnetContainer": "[steps('basics').vnetSection.vnetContainer]",
+            "vnetSourceType": "[steps('basics').vnetSection.vnetSourcetype]",
+            "denormalizeEvents": "[steps('basics').vnetSection.denormalizeEvents]",
             "SplunkEndpoint": "[steps('basics').splunkHECSection.splunkHECEndpoint]",
             "SplunkToken": "[steps('basics').splunkHECSection.splunkHECToken]",
             "githubRepoURL": "[steps('basics').repoSection.repoURL]",
