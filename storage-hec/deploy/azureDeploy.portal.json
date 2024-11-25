@@ -90,7 +90,7 @@
                         "name": "vnetConnectionString",
                         "label": "Storage Account Connection String",
                         "type": "Microsoft.Common.TextBox",
-                        "toolTip": "The connection string to the stroage account containing NSG Flow Logs",
+                        "toolTip": "The connection string to the stroage account containing vnet Flow Logs",
                         "constraints": {
                             "required": true
                         }
@@ -109,7 +109,7 @@
                         "name": "vnetSourcetype",
                         "label": "Vnet Source Type",
                         "type": "Microsoft.Common.TextBox",
-                        "toolTip": "Splunk Souretype for the vNet Logs",
+                        "toolTip": "Splunk Souretype for the vnet Logs",
                         "defaultValue": "azure:vnet:flowlog",
                         "constraints": {
                             "required": true
